@@ -4,7 +4,7 @@
 replicaCount: 1
 image:
   repository: gcr.io/jstrachan-multicluster/nodey471
-  tag: 1.0.6
+  tag: 1.0.7
   pullPolicy: IfNotPresent
 
 # define environment variables here as a map of key: value
