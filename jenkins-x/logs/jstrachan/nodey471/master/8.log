@@ -1,0 +1,127 @@
+
+Showing logs for build [32mjstrachan-nodey471-master-n9px2-8[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-2p6pz[0m
+{"level":"info","ts":1593090981.4495518,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1593090981.4502423,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mjstrachan-nodey471-master-n9px2-8[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-zccgn[0m
+{"level":"info","ts":1593090981.8228655,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1593090981.8240738,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mjstrachan-nodey471-master-n9px2-8[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mjstrachan-nodey471-master-n9px2-8[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-jstrachan-nodey471-master-n9px2-f6f5x[0m
+{"level":"info","ts":1593090988.9503195,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1593090990.0416567,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/jstrachan/nodey471.git @ v1.0.13 in path /workspace/source"}
+
+Showing logs for build [32mjstrachan-nodey471-master-n9px2-8[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mjstrachan-nodey471-master-n9px2-8[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mjstrachan-nodey471-master-n9px2-8[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npmrc[0m
+WARNING: failed to find Secret npm-token in namespace **
+
+Showing logs for build [32mjstrachan-nodey471-master-n9px2-8[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-install[0m
+npm notice created a lockfile as package-lock.json. You should commit this file.
+npm WARN REPLACE_ME@1.0.13 No repository field.
+npm WARN REPLACE_ME@1.0.13 No license field.
+
+up to date in 0.368s
+found 0 vulnerabilities
+
+
+Showing logs for build [32mjstrachan-nodey471-master-n9px2-8[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-test[0m
+
+> REPLACE_ME@1.0.13 test /workspace/source
+> echo "no test specified" && exit 0
+
+no test specified
+
+Showing logs for build [32mjstrachan-nodey471-master-n9px2-8[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+ERROR: logging before flag.Parse: E0625 13:16:39.396118      10 metadata.go:241] Failed to unmarshal scopes: json: cannot unmarshal string into Go value of type []string
+[36mINFO[0m[0000] Resolved base name node:9-slim to node:9-slim 
+[36mINFO[0m[0000] Using dockerignore file: /workspace/source/.dockerignore 
+[36mINFO[0m[0000] Resolved base name node:9-slim to node:9-slim 
+[36mINFO[0m[0000] Retrieving image manifest node:9-slim        
+ERROR: logging before flag.Parse: E0625 13:16:39.869080      10 metadata.go:142] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
+ERROR: logging before flag.Parse: E0625 13:16:39.871605      10 metadata.go:159] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+[36mINFO[0m[0002] Retrieving image manifest node:9-slim        
+[36mINFO[0m[0003] Built cross stage deps: map[]                
+[36mINFO[0m[0003] Retrieving image manifest node:9-slim        
+[36mINFO[0m[0003] Retrieving image manifest node:9-slim        
+[36mINFO[0m[0004] cmd: EXPOSE                                  
+[36mINFO[0m[0004] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0004] Checking for cached layer gcr.io/jstrachan-multicluster/cache:921adce1792b0eda790fe41a2f470ac047b250c61ce8bce1e464154ed301c148... 
+[36mINFO[0m[0005] No cached layer found for cmd COPY . .       
+[36mINFO[0m[0005] Unpacking rootfs as cmd COPY . . requires it. 
+[36mINFO[0m[0010] Taking snapshot of full filesystem...        
+[36mINFO[0m[0012] Resolving paths                              
+[36mINFO[0m[0013] ENV PORT 8080                                
+[36mINFO[0m[0013] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0013] EXPOSE 8080                                  
+[36mINFO[0m[0013] cmd: EXPOSE                                  
+[36mINFO[0m[0013] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0013] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0013] WORKDIR /usr/src/app                         
+[36mINFO[0m[0013] cmd: workdir                                 
+[36mINFO[0m[0013] Changed working directory to /usr/src/app    
+[36mINFO[0m[0013] Creating directory /usr/src/app              
+[36mINFO[0m[0013] Resolving paths                              
+[36mINFO[0m[0013] Taking snapshot of files...                  
+[36mINFO[0m[0013] COPY . .                                     
+[36mINFO[0m[0013] Resolving paths                              
+[36mINFO[0m[0013] Taking snapshot of files...                  
+[36mINFO[0m[0013] CMD ["npm", "start"]                         
+[36mINFO[0m[0013] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0013] Pushing layer gcr.io/jstrachan-multicluster/cache:921adce1792b0eda790fe41a2f470ac047b250c61ce8bce1e464154ed301c148 to cache now 
+
+Showing logs for build [32mjstrachan-nodey471-master-n9px2-8[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Converted /workspace/source/charts/nodey471 to an unshallow repository
+Generating change log from git ref 39eadacff296c0bf69227498a9c9268a7e228d6c => 0e7e1641268bf2680faa2126649044a7feb69486
+Associating user x-0 in users.jenkins.io with email jenkins-x@googlegroups.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit f7922285a1a5d7a63351298c7d745b577b70375b with issues: User.jenkins.io "x-0" is in*****: metadata.labels: In***** value: "-0": a ***** label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for *****ation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+Associating user x-0 in users.jenkins.io with email jenkins-x@googlegroups.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit f7922285a1a5d7a63351298c7d745b577b70375b with issues: User.jenkins.io "x-0" is in*****: metadata.labels: In***** value: "-0": a ***** label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for *****ation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+Finding issues in commit messages using git format
+Associating user x-0 in users.jenkins.io with email jenkins-x@googlegroups.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit 8b3a1fd4085855ff3cb82736a654f8e3f4200f71 with issues: User.jenkins.io "x-0" is in*****: metadata.labels: In***** value: "-0": a ***** label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for *****ation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+Associating user x-0 in users.jenkins.io with email jenkins-x@googlegroups.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit 8b3a1fd4085855ff3cb82736a654f8e3f4200f71 with issues: User.jenkins.io "x-0" is in*****: metadata.labels: In***** value: "-0": a ***** label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for *****ation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+WARNING: No release found for jstrachan/nodey471 and tag v1.0.13 so creating a new release
+Updated the release information at https://github.com/jstrachan/nodey471/releases/tag/v1.0.13
+generated: /workspace/source/charts/nodey471/templates/release.yaml
+Created Release nodey471-1-0-13 resource in namespace **
+Updating PipelineActivity jstrachan-nodey471-master-8 with version 1.0.13
+Updated PipelineActivities jstrachan-nodey471-master-8 with release notes URL: https://github.com/jstrachan/nodey471/releases/tag/v1.0.13
+
+Showing logs for build [32mjstrachan-nodey471-master-n9px2-8[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: bucketrepo http://bucketrepo/bucketrepo/charts/
+Successfully added Helm repository bucketrepo.
+Uploading chart file nodey471-1.0.13.tgz to http://bucketrepo/bucketrepo/charts/api/charts
+Received 200 response: 
+
+Showing logs for build [32mjstrachan-nodey471-master-n9px2-8[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
+defaulting to the version 1.0.13 from $VERSION
+loading version stream URL https://github.com/jenkins-x/**r-versions.git ref v0.0.193
+checking out ref v0.0.193
+running command: git config --global credential.helper store
+WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
+Promoting app nodey471 version 1.0.13 to namespace **-staging
+running command: git clone https://github.com/cb-kubecd/environment-bootv3-scratch2-staging.git **-promote-236439489
+Cloning into '**-promote-236439489'...
+cloned https://github.com/cb-kubecd/environment-bootv3-scratch2-staging.git to /tmp/**-promote-236439489
+created Pull Request https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/24 from dir /tmp/**-promote-236439489
+The build for the Pull Request last commit is currently in progress.
+The build for the Pull Request last commit is currently in progress.
+The build for the Pull Request last commit is currently in progress.
+The build for the Pull Request last commit is currently in progress.
+Pull Request https://github.com/cb-kubecd/environment-bootv3-scratch2-staging/pull/24.diff is merged at sha 3925d00c9bddbd988c810d886950253c3bbb5978
+Pull Request merged but we are not waiting for the update pipeline to complete!
